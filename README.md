@@ -23,7 +23,7 @@ Following are the packages description and implementation details of the game
 • Ass7Game
     Main class that holds the main function for the current game.
     Responsible for Creating a main menu with matching tasks, creating a new game flow object on user's demand (when starting a game) and running it.
-<br>
+<br><br>
     
 • SpaceInvaderLevel
     Class is used to define a default structure for a level.
