@@ -2,79 +2,158 @@
 
 Following are the packages description and implementation details of the game
 
+
+# Animation(package) :
+•	Animation Runner
+This class is used to wrap the animation running algorithms in our code.
+It excepts an Animation object, and runs it one frame at a time, with proper fps values until given animation is supposed to be stopped.
+•	Animation (Interface)
+Targets all of our animation-related template-methods and put them into one interface.
+•	Countdown Animation
+Holds the properties for a countdown animation graphics, and is responsible
+To run it according to given values of seconds (for entire animation) , and starting number.
+•	EndScreen
+Shows the proper End-screen animation.
+Responsible for showing the right animation for a winner or a loser.
+•	HighScoresAnimation
+Hold the properties for a high-score table animation graphics, with updated values.
+•	KeyPressStoppableAnimation
+Used to extract the "waiting-for-key-press" behavior away from the different screens, and into a class - that will wrap an existing animation and add a "waiting-for-key" behavior to it.
+•	PauseScreen
+Runs a pause screen animation.
+•	TextBorder
+Used to draw borders for given strings.
+
+
+# Animation.menu(package):
+        • Menu (Inteface)
+        General menu interface used to wrap menu's methods.
+        • MenuAnimation
+        Implement the Interface above for a menu animation object,
+        Which is responsible to hold tasks for a menu object.
+        Its used to run menu's animation –  by displaying all of the menu's options and react according to user's key-press.
+        • Task(Interface)
+        This interface wraps a run method for a task, so when a user selection is made on a menu, the task will run according to his key press, and return a value for a task.
+
+
+
+
+
+
+
 # Collidable (package):
-• Alien
-    Extends Block class. Responsible for a single alien object and its behavior on a collision.
-    Also contains a method for moving a single alien object by given units.
-<br><br>
-• AlienFormation
-    This class holds a matrix of Alien objects and is responsible for their entire game behavior as a formation of moving aliens.
-    It holds members such as starting position, bounds and movement speed for a formation.
-    An Alien-Formation holds methods such as position resetting, or entire formation movement considering its bounds
-<br><br>
-• SpaceShip
-    Space-Ship is a Rectangle controlled by user – extends paddle class. Responsible for destroying Aliens in their formation by shooting on a key press, so user can pass levels and gain score.
-<br>
-<br>
+•	Alien
+Extends Block class. Responsible for a single alien object, its behavior on a collision,
+And graphics.
+•	AlienFormation 
+This class holds a matrix of Alien objects as a list and is responsible for their entire game behavior as a formation of moving aliens.
+It holds a starting position, bounds, movement speed for a formation, as well as position resetting and velocity changes on certain events.
+•	Block
+A Class for a block object. Defines properties such as width, height and position for a block.
+Class is also responsible for defining basic blocks behavior on a collision (Velocity change for hitter), or other non-basic behaviors that react as defined for a hit event and drawing methods.
+•	Collidable(Interface)
+Wraps methods for a collidable object. Main target is to define a method for each object on hit event.
+•	CollisionInfo
+Responsible for storing and returning information of a collision event : object who participated in the collision and point of collision .
+•	Paddle
+Paddle is a Rectangle controlled by user , responsible for bouncing the ball in the event of collision with a ball object.
+•	SpaceShip
+Space-Ship is a Rectangle controlled by user – extends paddle class . Responsible for destroying Aliens in their formation by shooting on a key press , so user can pass levels and gain score.
+Constants (package) :
+•	Consts
+Class holds game related constants , that are used in the entire program , and are not related to a specific level.
+•	LevelConsts
+Holds all of the Constants for default game levels defined on Assignment 3;
+ such as number of balls per level , number and position of blocks and more.
+Factories (package) :
+•	BlockColorDrawer
+Responsible for drawing a block object as a single colored rectangle.
+•	BlockCreator (Interface)
+Wraps block-creation factories in an interface, for a creation method.
+•	BlockDrawer (Interface)
+Wraps block-drawing factories in an interface, for a drawing method.
+Each block drawer holds the right drawing method for a block as defined .
+Block objects hold a list of block drawers that are used to draw the block as defined.
+•	BlockFactory
+•	BlockImageDrawer
+•	BlocksFromSymbolFactory
+•	ColorParser
+•	ImageParser
+•	LevelFactory
+
+
+
+
+
+
+
 
 
 # Game (package) :
-<br>
-• Ass7Game
-    Main class that holds the main function for the current game.
-    Responsible for Creating a main menu with matching tasks, creating a new game flow object on user's demand (when starting a game) and running it.
-<br><br>
-    
-• SpaceInvaderLevel
-    Class is used to define a default structure for a level.
-    It holds most of the game logic and is responsible for level-initializing methods such as background creation.
-    It also holds shooting behaviors for player and enemies, and animation running methods for a game level.
-<br>
-
-• GameFlow
-    Is responsible for the levels game flow–
-    Which means that it is initializing and running a new game level from the above class with given start speed, that is increasing in each new level. It's also responsible to know if a player lost – and stops the changing levels loop, to present the player with the right end screen.
-<br>
-<br>
+•	Ass7Game
+Main class that holds the main function for the current game.
+Responsible for Creating a menu with a start game option , high score table , and exit tasks. 
+•	GameEnvironment
+•	GameFlow
+•	SpaceInvaderLevel
+Class is used to define a default structure for a level.
+It holds most of the game logic and is responsible for holding initializing methods of a level such as background creation and shooting behaviors for player and enemies.
 
 
-# game.listener(package):
-<br>
+game.Levels(package)  :
+	LevelInformation (Inteface)
+	LevelSet
+	VelocityConstructor
+	ColorBackground
+	ImageBackground
+        game.levels.defaultLevels (package):
+        •	LevelDirectHit 
+        •	LevelFinalFour
+        •	LevelGreenThree
+        •	LevelWideEasy
+                Game.levels.defaultLevels.backgroundGraphics:
+                o	LevelDirectHit 
+                o	DirectHitBackground
+                o	FinalFourBackground
+                o	GreenThreeeBackground
+                o	WideEasyBackground
 
-▪ AlienListener (Inteface)
-    This interface wraps listeners classes who implement it with a hitEvent method. Aliens will hold a list of AlienListeners to react to hit events.
-<br>
-    
-▪ AlienRemove
-    This class implements the above interface and is responsible for the reaction of an alien in occasion of a hit event.
-    it is used to remove an alien from the game in the occasion of player hit and from its formation.
-    If an alien hits another alien this listener removes the ball with no further action.
-<br>
 
-▪ SpaceShipHitListener
-    Is responsible to set all space ship objects who hold it as hit.
-    game reacts according to space ship state and decrease the lives counter)
-<br>
+game.listener(package):
+	AlienListener (Inteface)
+This interface wraps listeners classes who implements it with a hitEvent method . Aliens will hold a list of AlienListeners to react to an hit event.
+	AlienRemove
+This class implements the above interface , and is responsible for the reaction of an alien in occasion of a hit event.
+it is used to remove an alien from the game in the occasion of player hit and from its formation, and add to player's score.
+If an alien hits another alien this listener remove the ball with no further action.
+	SpaceShipHitListener
+Sets a space ship as hitted .( game reacts according to space ship state and remove from lives counter)
 
 
-# Aliens formation Implementation:
-<br>
+Geometry (package):
 
-First, I created a single alien object class – that extends the block class.<br>
-It holds a constructor, alien graphics, and methods to move a single alien in position, draw a single alien , and react on an hit event using hitListeners and alienListeners interfaces.<br>
-(alienListeners – are used to react in the event of alien being hit.<br>
-It removes an alien from the game and from its formation if needed, and holds other properties.)<br>
-Aliens holds an alienListeners list.<br>
-After creating this class, I created another class for an Alien formation .<br>
-This class holds a matrix of aliens, with starting position and movement speed for an entire formation . its time passed method moves the formation around the screen according to requirements , and holds other methods to wrap an entire formation behavior .<br>
-Shields Implementation:<br>
-Shields are basically just blocks.<br>
-I used the blocks class, and implemented a shield creation method on SpaceInvaderslevel Class (according to requirements; such as number of shields and position) –<br>
-so when a game has started shields will be initialized. Shields hold ball remover listener.<br>
-Shots Implementation:<br>
-Shot is a ball with constant velocity, released from an alien or a spaceship.<br>
-Both Player and Alien shots are implemented in SpaceInvadersLevel class.<br>
-Alien shots are released from a random alien every 0.5 seconds .<br>
-Player shots can be released every 0.35 sec and released only on space key-press.<br>
-Game level holds 2 arrays; 1 for player shots and 1 for alien shots –<br>
-To react according to each shot and its hit. Balls are removed when hitting an object, or when they are out of boundaries.<br>
+•	Line
+•	LineEquation
+•	Point
+•	Rectangle
+Io (package) :
+•	BlockDefinitionReader
+•	LevelSetReader
+•	LevelSpecificationReader
+
+
+
+
+
+
+
+Sprites (package):
+•	Ball
+•	InfoBlock
+•	LevelNameIndicator
+•	ScoreIndicator
+•	Sprite (Interface)
+•	SpriteCollection
+•	Velocity
+
+
