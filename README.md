@@ -131,21 +131,25 @@ It holds most of the game logic and is responsible for holding initializing meth
 <br><br>
 game.Levels(package)  :
 	LevelInformation (Inteface)
+<br>
 	LevelSet
+<br>
 	VelocityConstructor
+<br>
 	ColorBackground
+<br>
 	ImageBackground
         game.levels.defaultLevels (package):
-        •	LevelDirectHit 
-        •	LevelFinalFour
-        •	LevelGreenThree
-        •	LevelWideEasy
-                Game.levels.defaultLevels.backgroundGraphics:
-                o	LevelDirectHit 
-                o	DirectHitBackground
-                o	FinalFourBackground
-                o	GreenThreeeBackground
-                o	WideEasyBackground
+        •	LevelDirectHit <br>
+        •	LevelFinalFour <br>
+        •	LevelGreenThree <br>
+        •	LevelWideEasy <br>
+                Game.levels.defaultLevels.backgroundGraphics: <br>
+                o	LevelDirectHit  <br>
+                o	DirectHitBackground <br>
+                o	FinalFourBackground <br>
+                o	GreenThreeeBackground <br>
+                o	WideEasyBackground <br>
 
 
 game.listener(package):
@@ -161,30 +165,30 @@ If an alien hits another alien this listener remove the ball with no further act
 Sets a space ship as hitted .( game reacts according to space ship state and remove from lives counter)
 
 
-Geometry (package):
+Geometry (package): <br>
 
-•	Line
-•	LineEquation
-•	Point
-•	Rectangle
-Io (package) :
-•	BlockDefinitionReader
-•	LevelSetReader
-•	LevelSpecificationReader
-
-
+•	Line <br>
+•	LineEquation <br>
+•	Point <br>
+•	Rectangle <br> <br>
+Io (package) : <br>
+•	BlockDefinitionReader <br>
+•	LevelSetReader <br>
+•	LevelSpecificationReader <br>
 
 
 
+ <br> <br>
 
 
-Sprites (package):
-•	Ball
-•	InfoBlock
-•	LevelNameIndicator
-•	ScoreIndicator
-•	Sprite (Interface)
-•	SpriteCollection
-•	Velocity
+
+Sprites (package): <br>
+•	Ball <br>
+•	InfoBlock <br>
+•	LevelNameIndicator <br>
+•	ScoreIndicator <br>
+•	Sprite (Interface) <br>
+•	SpriteCollection <br>
+•	Velocity <br>
 
 
