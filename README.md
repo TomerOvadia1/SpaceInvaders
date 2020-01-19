@@ -6,6 +6,7 @@ Following are the packages description and implementation details of the game
 • Alien
     Extends Block class. Responsible for a single alien object and its behavior on a collision.
     Also contains a method for moving a single alien object by given units.
+    <br>
 • AlienFormation
     This class holds a matrix of Alien objects and is responsible for their entire game behavior as a formation of moving aliens.
     It holds members such as starting position, bounds and movement speed for a formation.
