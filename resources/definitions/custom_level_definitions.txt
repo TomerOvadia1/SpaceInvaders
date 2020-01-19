@@ -1,0 +1,80 @@
+
+#Level 1
+START_LEVEL
+level_name: Arkanoid Custom 1
+ball_velocities:45,550 310,550
+background:image(background_images/background.jpg)
+paddle_speed:650
+paddle_width:160
+block_definitions:definitions/standard_block_definitions.txt
+blocks_start_x:25
+blocks_start_y:80
+row_height:25
+num_blocks:51
+START_BLOCKS
+wocrbpyw
+wocrbpywo
+wocrbpywoc
+wocrbpywocg
+GGGGGGGGGGGGG
+END_BLOCKS
+END_LEVEL
+
+#level 2
+START_LEVEL
+level_name: Arkanoid Custom 2
+ball_velocities:45,550
+background:image(background_images/background.jpg)
+paddle_speed:650
+paddle_width:160
+block_definitions:definitions/standard_block_definitions.txt
+blocks_start_x:25
+blocks_start_y:80
+row_height:25
+num_blocks:56
+START_BLOCKS
+Gpcgyrb-------b
+pcgyrb-------br
+cgyrb-------bry
+gyrb-------bryg
+yrb-------brygc
+rb-------brygcp
+b-------brygcpG
+
+
+END_BLOCKS
+END_LEVEL
+
+#level 3
+START_LEVEL
+level_name: Arkanoid Custom 3
+ball_velocities:35,550
+background:image(background_images/background.jpg)
+paddle_speed:700
+paddle_width:160
+block_definitions:definitions/standard_block_definitions.txt
+blocks_start_x:25
+blocks_start_y:80
+row_height:25
+num_blocks:94
+START_BLOCKS
+----y------y---
+----y------y---
+-----y----y----
+-----y----y----
+----GGGGGGGG---
+----GGGGGGGG---
+---GGrGGGGrGG--
+---GGrGGGGrGG--
+--GGGGGGGGGGGG-
+--GGGGGGGGGGGG-
+--G-GGGGGGGG-G-
+--G-G------G-G-
+--G-G------G-G-
+-----GG--GG---
+-----GG--GG---
+
+END_BLOCKS
+END_LEVEL
+
+
