@@ -6,12 +6,12 @@ Following are the packages description and implementation details of the game
 • Alien
     Extends Block class. Responsible for a single alien object and its behavior on a collision.
     Also contains a method for moving a single alien object by given units.
-<br>
+<br><br>
 • AlienFormation
     This class holds a matrix of Alien objects and is responsible for their entire game behavior as a formation of moving aliens.
     It holds members such as starting position, bounds and movement speed for a formation.
     An Alien-Formation holds methods such as position resetting, or entire formation movement considering its bounds
-<br>
+<br><br>
 • SpaceShip
     Space-Ship is a Rectangle controlled by user – extends paddle class. Responsible for destroying Aliens in their formation by shooting on a key press, so user can pass levels and gain score.
 <br>
