@@ -1,6 +1,6 @@
 # SpaceInvaders
 
-# Following are the packages description and implementation details of the game
+Following are the packages description and implementation details of the game
 
 # Collidable (package):
 • Alien
