@@ -130,7 +130,7 @@ It holds most of the game logic and is responsible for holding initializing meth
 
 
 <br><br>
-game.Levels(package)  :
+# game.Levels(package)  :
 	LevelInformation (Inteface)
 <br>
 	LevelSet
@@ -153,7 +153,7 @@ game.Levels(package)  :
                 o	WideEasyBackground <br>
 
 
-game.listener(package):
+# game.listener(package):
 •	AlienListener (Inteface) <br>
 This interface wraps listeners classes who implements it with a hitEvent method . Aliens will hold a list of AlienListeners to react to an hit event.
 <br><br>
@@ -166,13 +166,13 @@ If an alien hits another alien this listener remove the ball with no further act
 Sets a space ship as hitted .( game reacts according to space ship state and remove from lives counter)
 
 
-Geometry (package): <br>
+# Geometry (package): <br>
 
 •	Line <br>
 •	LineEquation <br>
 •	Point <br>
 •	Rectangle <br> <br>
-Io (package) : <br>
+# Io (package) : <br>
 •	BlockDefinitionReader <br>
 •	LevelSetReader <br>
 •	LevelSpecificationReader <br>
@@ -183,7 +183,7 @@ Io (package) : <br>
 
 
 
-Sprites (package): <br>
+# Sprites (package): <br>
 •	Ball <br>
 •	InfoBlock <br>
 •	LevelNameIndicator <br>
